@@ -15,9 +15,9 @@ Piece::Piece(uint8_t position) {
 }
 
 uint8_t Pawn::next() {
-	if (blackBoardMatrix & (focus << 9) > 0 && cb->focus & edge == 0)
+	if (blackBoardMatrix & (focus << 9) > 0 && cb->focus & queensideedge == 0)
 		cb->movelist++=focus << 9;
-	if (blackBoardMatrix & (focus >> 7) > 0 && cb->focus & edge == 0)
+	if (blackBoardMatrix & (focus >> 7) > 0 && cb->focus & kingsideedge == 0)
 		cb->movelist++=focus << 7;
 	if (whiteBoardMatrix & (cb->focus >> 8) == 0 && blackBoardMatrix & (cb->focus >> 8) == 0)
 		cb->movelist++=focus << 8;

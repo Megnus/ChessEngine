@@ -58,8 +58,10 @@ int main() {
 	}
 
 	alphabeta(depth, chessboard, move) {
+	alphabeta(depth, chessboard) {
 		if (move != null)
 			chessboard.next(move)
+			chessboard.move()
 
 		if (depth == 0)
 			return evalutaion
@@ -68,8 +70,10 @@ int main() {
 		movelist = sort(movelist);
 
 		for (move in movelist) {
+		while (chessboard->next())
 			// move must contain pieceColorEnum, pieceHitEnum, moveFrom64, moveTo64
 			score = alphabeta(depth - 1, chessBoard, move);
+			score = alphabeta(depth - 1, chessBoard);
 		}
 
 		delete movelist;
