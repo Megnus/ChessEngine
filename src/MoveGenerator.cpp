@@ -11,6 +11,7 @@
 MoveGenerator::MoveGenerator(ChessBoard *cb) {
 	// TODO Auto-generated constructor stub
 	Move list[1000];
+	// 
 	for (uint64_t focus = 0b1; focus > 0; focus <<= 1) {
 		if (cb->whiteBoardMatrix & focus > 0) {
 			if (cb->whitePawnMatrix & focus > 0)
