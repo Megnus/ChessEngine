@@ -5,16 +5,16 @@
  *      Author: msundstr
  */
 #include <iostream>
-
+#include "ChessBoard.h"
 //
-#ifndef PIECE_H_
-#define PIECE_H_
+#ifndef PAWN_H_
+#define PAWN_H_
 
-class Piece {
+class Pawn {
 public:
-	Piece(uint8_t position);
-	virtual ~Piece();
-	uint8_t next();
+	Pawn(uint8_t position);
+	virtual ~Pawn();
+	uint8_t next(C);
 	uint8_t before();
 	enum PieceType { knight, queen, none };
 	uint64_t pieceMatrix;

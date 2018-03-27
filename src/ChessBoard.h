@@ -40,6 +40,9 @@ public:
 	uint64_t blackQueenMatrix = 0b0;
 	uint64_t blackKingMatrix = 0b0;
 
+	uint16_t moveindex = 0;
+	uint64_t movelist[100];
+
 	bool whiteCastle;
 	bool blackCastle;
 
